@@ -1,0 +1,11 @@
+import StreamGrid from "../widgets/StreamGrid"
+import Sidebar from "../widgets/Sidebar"
+
+export default function WatchPage() {
+  return (
+    <div className="layout">
+      <StreamGrid />
+      <Sidebar />
+    </div>
+  )
+}
