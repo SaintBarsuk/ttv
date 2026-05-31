@@ -1,0 +1,20 @@
+import { useStreamStore } from "../app/store/stream.store"
+
+export default function StreamGrid() {
+  const streams = useStreamStore(
+    (s) => s.streams
+  )
+
+  return (
+    <div className="grid">
+      {streams.map((ch) => (
+        <div className="tile" key={ch}>
+          <iframe
+            src={`https://player.twitch.tv/?channel=${ch}&parent=localhost&muted=true`}
+            allowFullScreen
+          />
+        </div>
+      ))}
+    </div>
+  )
+}
