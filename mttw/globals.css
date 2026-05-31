@@ -1,0 +1,59 @@
+body {
+  margin: 0;
+  font-family: Arial;
+  background: #282832;
+  color: #ccc;
+}
+
+.layout {
+  display: flex;
+  height: 100vh;
+}
+
+.grid {
+  flex: 1;
+  display: grid;
+  grid-template-columns: repeat(
+    auto-fit,
+    minmax(420px, 1fr)
+  );
+  gap: 10px;
+  padding: 10px;
+}
+
+.tile {
+  height: 300px;
+  border: 1px solid #374151;
+  background: #2d2d39;
+}
+
+.tile iframe {
+  width: 100%;
+  height: 100%;
+  border: none;
+}
+
+.sidebar {
+  width: 320px;
+  background: #2d2d39;
+  border-left: 1px solid #374151;
+  padding: 16px;
+}
+
+input {
+  width: 100%;
+  padding: 10px;
+  background: #282832;
+  color: #ccc;
+  border: 1px solid #374151;
+  margin-bottom: 10px;
+}
+
+button {
+  width: 100%;
+  background: #0070ba;
+  color: white;
+  border: none;
+  border-radius: 20px;
+  padding: 10px;
+}
