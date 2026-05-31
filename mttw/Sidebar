@@ -1,0 +1,28 @@
+import { useState } from "react"
+import { useStreamStore } from "../app/store/stream.store"
+
+export default function Sidebar() {
+  const [input, setInput] = useState("")
+  const add = useStreamStore((s) => s.add)
+
+  return (
+    <aside className="sidebar">
+      <input
+        value={input}
+        onChange={(e) =>
+          setInput(e.target.value)
+        }
+        placeholder="channel"
+      />
+
+      <button
+        onClick={() => {
+          add(input)
+          setInput("")
+        }}
+      >
+        Add
+      </button>
+    </aside>
+  )
+}
